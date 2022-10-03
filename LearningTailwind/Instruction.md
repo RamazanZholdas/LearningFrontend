@@ -8,5 +8,5 @@ cd src/
 touch main.css
 echo "@tailwind base;\n@tailwind components;\n@tailwind utilities;" > main.css
 cd ../
-echo "измените scripts в package.json на build и вставьте команду tailwind build -i src/main.css -o public/styles.css"
+echo "измените scripts в package.json на build и вставьте команду tailwind build -i src/main.css -o public/styles.css --watch"
 yarn build
