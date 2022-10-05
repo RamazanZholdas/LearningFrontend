@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.my-list > li{
+    @apply text-white text-xl my-5 pl-12;
+    display: list-item;
+}
