@@ -5,3 +5,10 @@
 body{
   background-color: #000300;
 }
+
+video{
+  width: 74%;
+  /*height: 55%;*/
+  object-fit: contain;
+  position: relative;
+}
