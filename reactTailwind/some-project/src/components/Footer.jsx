@@ -2,18 +2,18 @@ import React from 'react';
 
 function Footer() {
   return (
-    <footer className="border-t mt-10 py-10 px-2 flex justify-around">
+    <footer className="border-t mt-10 py-10 px-2 flex justify-around max-w-screen-lg mx-auto">
       <div className="w=2/5">
         <div>
           <h6 className="font-semibold text-green-400 mb-4">Company</h6>
           <ul>
             <li>
-              <a href="#" className="py-3 px-2 border-b-2 border-transparent text-gray-400 hover:border-gray-700">
+              <a href="#" className="py-3 px-5 border-b-2 border-transparent text-gray-400 hover:underline decoration-4 decoration-green-500 underline-offset-2">
                 Team
               </a>
             </li>
             <li>
-              <a href="#" className="py-3 px-2 border-b-2 border-transparent text-gray-400 hover:border-gray-700">
+              <a href="#" className="py-3 px-5 border-b-2 border-transparent text-gray-400 hover:underline decoration-4 decoration-green-500 underline-offset-2">
                 About us
               </a>
             </li>
