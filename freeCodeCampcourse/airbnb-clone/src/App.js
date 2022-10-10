@@ -1,11 +1,19 @@
-import React from 'react'
+import React from 'react';
+import Navbar from './components/Navbar';
+import Banner from './components/Banner';
+import Title from './components/Title';
+import Horlist from './components/Horlist';
+import CardElement from './components/CardElement';
 
 function App() {
   return (
-    <div>
-	  <h1 className='text-3xl text-blue-700 m-24'>Siski Zhibek prekrasni</h1>
+    <div className="max-w-screen-lg mx-auto">
+      <Navbar />
+      <Banner />
+      <Title />
+      <CardElement />
     </div>
   );
 }
 
-export default App
+export default App;
