@@ -2,15 +2,8 @@ import React from 'react';
 
 //0:img src 1:status 2:rate 3:Country 4:Name 5:price
 function CardElement({img, status, rate, country, name, price}) {
-  const arr = ["new", "sale", "hot"];
-  
-  //make first letters of array element capital using map function
-  const arr2 = arr.map((item) => {
-    return item.charAt(0).toUpperCase() + item.slice(1);
-  });
-
   return (
-    <div className="mt-10 mb-20">
+    <div className="mt-10 mb-20 overflow-hidden">
       <div className="flex flex-col">
         <a href="#" className="relative">
           <img
