@@ -2,7 +2,6 @@ import React from 'react';
 import Navbar from './components/Navbar';
 import Banner from './components/Banner';
 import Title from './components/Title';
-import Horlist from './components/Horlist';
 import CardElement from './components/CardElement';
 
 function App() {
@@ -11,7 +10,14 @@ function App() {
       <Navbar />
       <Banner />
       <Title />
-      <CardElement />
+      <CardElement
+        imgSrc="hz" 
+        status="Sold out"
+        rate="5.0"
+        country="(6) USA"
+        name="Life lessons with Matzhan"
+        price="136$"
+      />
     </div>
   );
 }

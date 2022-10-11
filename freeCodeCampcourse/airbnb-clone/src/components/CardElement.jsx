@@ -1,7 +1,8 @@
 import React from 'react';
 import Athlete from '../assets/spartsmen.png';
 
-function CardElement() {
+//0:img src 1:status 2:rate 3:Country 4:Name 5:price
+function CardElement({status, rate, country, name, price}) {
   return (
     <div className="ml-20 mt-10">
       <div className="flex flex-col">
@@ -12,7 +13,7 @@ function CardElement() {
             className="w-44 h-60 relative rounded-md inline-block"
           />
           <div className="absolute top-0 left-0 z-20 w-16 h-5 flex justify-center items-center overflow-hidden bg-white mt-3 ml-3">
-            <p className="text-black text-xs">Sold out</p>
+            <p className="text-black text-xs">{status}</p>
           </div>
         </a>
         <div className="flex justify-center mt-2 flex-col">
@@ -29,12 +30,12 @@ function CardElement() {
             />
           </svg>
           <div className="flex">
-            <p>5.0</p>
-            <p className="flex ml-1 text-gray-600">(6) USA</p>
+            <p>{rate}</p>
+            <p className="flex ml-1 text-gray-600">{country}</p>
           </div>
-          <p className='text-sm font-light'>Life lessons with Katie Zaferes</p>
+          <p className='text-sm font-light'>{name}</p>
           <div className='flex'>
-            <p className='mr-1 font-bold'>From $136 </p>
+            <p className='mr-1 font-bold'>From {price} </p>
             <p>/ person</p>
           </div>
         </div>
