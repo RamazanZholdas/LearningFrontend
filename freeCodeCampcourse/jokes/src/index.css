@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.card-size{
+    width: 317px;
+    height: 780px;
+    background-color: #23252C;
+}
+
+.card-size > img {
+    width: 317px;
+    height: 317px;
+}
+
+.content-text {
+    max-width: 247px;
+}
+
+.footer {
+    position: relative; 
+    bottom: 0; 
+    width: 100%;
+    @apply mt-14
+}
+
+.footer > svg {
+    @apply mx-2
+}
