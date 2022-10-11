@@ -1,20 +1,26 @@
 import React from 'react';
-import Athlete from '../assets/spartsmen.png';
 
 //0:img src 1:status 2:rate 3:Country 4:Name 5:price
-function CardElement({status, rate, country, name, price}) {
+function CardElement({img, status, rate, country, name, price}) {
+  const arr = ["new", "sale", "hot"];
+  
+  //make first letters of array element capital using map function
+  const arr2 = arr.map((item) => {
+    return item.charAt(0).toUpperCase() + item.slice(1);
+  });
+
   return (
-    <div className="ml-20 mt-10">
+    <div className="mt-10 mb-20">
       <div className="flex flex-col">
         <a href="#" className="relative">
           <img
-            src={Athlete}
+            src={img}
             alt="Kafee HiuPoimi"
-            className="w-44 h-60 relative rounded-md inline-block"
+            className="w-44 h-60 bg-auto rounded-md inline-block"
           />
-          <div className="absolute top-0 left-0 z-20 w-16 h-5 flex justify-center items-center overflow-hidden bg-white mt-3 ml-3">
+          {status && <div className="absolute top-0 left-0 z-20 w-16 h-5 flex justify-center items-center overflow-hidden bg-white mt-3 ml-3">
             <p className="text-black text-xs">{status}</p>
-          </div>
+          </div>}
         </a>
         <div className="flex justify-center mt-2 flex-col">
           <svg
