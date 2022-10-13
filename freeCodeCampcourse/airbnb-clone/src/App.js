@@ -9,16 +9,7 @@ function App() {
   console.log(data.img);
 
   const myCards = data.map((data) => {
-    return (
-      <CardElement
-        img={data.img}
-        status={data.status}
-        rate={data.rate}
-        country={data.country}
-        name={data.name}
-        price={data.price}
-      />
-    );
+    return <CardElement data={data} />;
   });
 
   return (

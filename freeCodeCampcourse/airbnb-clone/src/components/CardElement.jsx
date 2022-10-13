@@ -1,18 +1,18 @@
 import React from 'react';
 
 //0:img src 1:status 2:rate 3:Country 4:Name 5:price
-function CardElement({img, status, rate, country, name, price}) {
-  return (
+function CardElement({data: {img,  openSpot, rate, country, name, price}}) {
+    return (
     <div className="mt-10 mb-20 overflow-hidden">
       <div className="flex flex-col">
         <a href="#" className="relative">
           <img
-            src={img}
+            src={ img}
             alt="Kafee HiuPoimi"
             className="w-44 h-60 bg-auto rounded-md inline-block"
           />
-          {status && <div className="absolute top-0 left-0 z-20 w-16 h-5 flex justify-center items-center overflow-hidden bg-white mt-3 ml-3">
-            <p className="text-black text-xs">{status}</p>
+          { openSpot === 0 && <div className="absolute top-0 left-0 z-20 w-16 h-5 flex justify-center items-center overflow-hidden bg-white mt-3 ml-3">
+            <p className="text-black text-xs">Sold out</p>
           </div>}
         </a>
         <div className="flex justify-center mt-2 flex-col">
@@ -29,12 +29,12 @@ function CardElement({img, status, rate, country, name, price}) {
             />
           </svg>
           <div className="flex">
-            <p>{rate}</p>
-            <p className="flex ml-1 text-gray-600">{country}</p>
+            <p>{  rate}</p>
+            <p className="flex ml-1 text-gray-600">{  country}</p>
           </div>
-          <p className='text-sm font-light'>{name}</p>
+          <p className='text-sm font-light'>{  name}</p>
           <div className='flex'>
-            <p className='mr-1 font-bold'>From {price} </p>
+            <p className='mr-1 font-bold'>From {  price} </p>
             <p>/ person</p>
           </div>
         </div>
